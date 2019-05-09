@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    tools:context=".Login"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/subscribe_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/discover_nearby_devices" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/publish_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/share_device_information" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:id="@+id/emailBox"/>
+
+    <EditText
+        android:id="@+id/passwordBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:inputType="textWebPassword" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/loginButton"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click here to register"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:id="@+id/registerLink"
+        android:textColor="#0D47A1"/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/spoof_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spoof Location"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/spoofmac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0C:E0:DC:43:6D:0F"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/nearby_devices_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:transcriptMode="alwaysScroll" />
+</LinearLayout>
